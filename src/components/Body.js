@@ -1,8 +1,7 @@
-import "bulma/css/bulma.min.css";
-import "../styles/App.css";
+import LMap from "./Map";
 
 const Body = props =>
-  <div className="Body">
+  <div>
     <section class="hero is-primary">
       <div class="hero-body">
         <div class="container has-text-centered">
@@ -25,9 +24,7 @@ const Body = props =>
         <div class="columns">
           <div class="column">
             <div class="box">
-              <div id="map">
-                <script type="module" src="javascript/index.js" />
-              </div>
+              <LMap />
             </div>
           </div>
           <div class="column">
@@ -48,7 +45,7 @@ const Body = props =>
                   <input class="input" type="text" placeholder="End Point" />
                 </div>
               </div>
-              <div class="field is-grouped">
+              <div class="field">
                 <div class="control">
                   <input
                     class="button is-info"

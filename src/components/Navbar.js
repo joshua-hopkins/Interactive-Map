@@ -1,4 +1,3 @@
-import "bulma/css/bulma.min.css";
 import "../styles/App.css";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -26,37 +25,35 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const NavBar = props =>
-  <div className="NavBar">
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="index.js">
-          {" "}Interactive Map!
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.js">
+        {" "}Interactive Map!
+      </a>
+
+      <a
+        role="button"
+        class="navbar-burger"
+        data-target="navMenu"
+        aria-label="menu"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+      </a>
+    </div>
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">
+          {" "}Home{" "}
         </a>
 
-        <a
-          role="button"
-          class="navbar-burger"
-          data-target="navMenu"
-          aria-label="menu"
-          aria-expanded="false"
-        >
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
+        <a class="navbar-item" href="documentation.html">
+          {" "}Documentation{" "}
         </a>
       </div>
-      <div id="navMenu" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="index.html">
-            {" "}Home{" "}
-          </a>
-
-          <a class="navbar-item" href="documentation.html">
-            {" "}Documentation{" "}
-          </a>
-        </div>
-      </div>
-    </nav>
-  </div>;
+    </div>
+  </nav>;
 
 export default NavBar;

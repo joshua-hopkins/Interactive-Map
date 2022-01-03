@@ -1,13 +1,18 @@
 import "../styles/App.css";
-import "bulma/css/bulma.min.css";
 import NavBar from "./Navbar";
 import Body from "./Body";
+import "bulma/css/bulma.min.css";
+import "leaflet/dist/leaflet.css";
 
 const App = props => {
   return (
     <div className="App">
-      <NavBar />
-      <Body />
+      <div className="Body">
+        <div className="NavigationBar">
+          <NavBar />
+        </div>
+        <Body />
+      </div>
     </div>
   );
 };

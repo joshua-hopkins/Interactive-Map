@@ -25,35 +25,36 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const NavBar = props =>
-  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="index.js">
-        {" "}Interactive Map!
-      </a>
-
-      <a
-        role="button"
-        class="navbar-burger"
-        data-target="navMenu"
-        aria-label="menu"
-        aria-expanded="false"
-      >
-        <span aria-hidden="true" />
-        <span aria-hidden="true" />
-        <span aria-hidden="true" />
-      </a>
-    </div>
-    <div id="navMenu" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="index.html">
-          {" "}Home{" "}
+  <div className="navigation-bar">
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.js">
+          {" "}Interactive Map!
         </a>
-
-        <a class="navbar-item" href="documentation.html">
-          {" "}Documentation{" "}
+        <a
+          role="button"
+          class="navbar-burger"
+          data-target="navMenu"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
         </a>
       </div>
-    </div>
-  </nav>;
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">
+            {" "}Home{" "}
+          </a>
+
+          <a class="navbar-item" href="documentation.html">
+            {" "}Documentation{" "}
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>;
 
 export default NavBar;

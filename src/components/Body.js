@@ -1,7 +1,9 @@
 import LMap from "./Map";
+import Address from "./Geocode";
+import InputForm from "./InputForm";
 
 const Body = props =>
-  <div>
+  <div className="Body">
     <section class="hero is-primary">
       <div class="hero-body">
         <div class="container has-text-centered">
@@ -29,31 +31,7 @@ const Body = props =>
           </div>
           <div class="column">
             <div class="box">
-              <div class="field">
-                <label class="label">Starting Point</label>
-                <div class="control">
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="Starting Point"
-                  />
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">End Point</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="End Point" />
-                </div>
-              </div>
-              <div class="field">
-                <div class="control">
-                  <input
-                    class="button is-info"
-                    type="submit"
-                    value={"Submit"}
-                  />
-                </div>
-              </div>
+              <InputForm />
             </div>
           </div>
         </div>

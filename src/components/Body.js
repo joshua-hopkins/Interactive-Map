@@ -1,8 +1,8 @@
-import LMap from "./Map";
+import LMap from "./LMap";
 import Address from "./Geocode";
 import InputForm from "./InputForm";
 
-const Body = props =>
+const Body = (props) => (
   <div className="Body">
     <section class="hero is-primary">
       <div class="hero-body">
@@ -25,7 +25,8 @@ const Body = props =>
       <div class="container">
         <div class="columns">
           <div class="column">
-            <div class="box">
+            <div class="box" id="map-box">
+              <div id="map"></div>
               <LMap />
             </div>
           </div>
@@ -37,6 +38,7 @@ const Body = props =>
         </div>
       </div>
     </section>
-  </div>;
+  </div>
+);
 
 export default Body;

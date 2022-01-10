@@ -4,7 +4,7 @@ import Body from "./Body";
 import "bulma/css/bulma.min.css";
 import "leaflet/dist/leaflet.css";
 
-const App = (props) => {
+const App = props => {
   return (
     <div className="App">
       <NavBar />

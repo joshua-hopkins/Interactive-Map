@@ -14,8 +14,7 @@ const LMap = () => {
         id: "mapbox/streets-v11",
         tileSize: 512,
         zoomOffset: -1,
-        accessToken:
-          "pk.eyJ1IjoiamdoNjAxIiwiYSI6ImNreGFxbXEwcTBydTUydm12c3ZuN21vbHgifQ.3wXWz7AI5lhGvNoLg-245Q",
+        accessToken: process.env.REACT_APP_OPENMAPS
       }
     ).addTo(map);
   });
@@ -47,6 +46,6 @@ export default LMap;
 //     tileSize={512}
 //     id="mapbox/streets-v11"
 //     zoomOffset={-1}
-//     accessToken="pk.eyJ1IjoiamdoNjAxIiwiYSI6ImNreGFxbXEwcTBydTUydm12c3ZuN21vbHgifQ.3wXWz7AI5lhGvNoLg-245Q"
+//     accessToken=""
 //   />
 // </MapContainer>

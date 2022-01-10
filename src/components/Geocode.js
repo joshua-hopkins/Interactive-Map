@@ -1,35 +1,35 @@
 import React, { useState } from "react";
 import Geocode from "react-geocode";
 
-Geocode.setApiKey("AIzaSyDPeCQiBwfzWpAi8n6zxC8NkhpStPuoTFQ");
+Geocode.setApiKey(process.env.REACT_APP_GOOGLE_GEOCODE);
 Geocode.setLanguage("en");
 Geocode.enableDebug();
 
 const coordinates = {
   firstPnt: [],
-  secondPnt: [],
+  secondPnt: []
 };
 
 const Address = (firstCord, secondCord) => {
   Geocode.fromAddress(firstCord).then(
-    (response) => {
+    response => {
       const { lat, lng } = response.results[0].geometry.location;
       console.log("Starting point", lat, lng);
       coordinates.firstPnt = [lat, lng];
       return coordinates.secondPnt;
     },
-    (error) => {
+    error => {
       console.error(error);
     }
   );
   Geocode.fromAddress(secondCord).then(
-    (response) => {
+    response => {
       const { lat, lng } = response.results[0].geometry.location;
       console.log("Ending point", lat, lng);
       coordinates.secondPnt = [lat, lng];
       return coordinates.secondPnt;
     },
-    (error) => {
+    error => {
       console.error(error);
     }
   );
